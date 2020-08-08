@@ -1,5 +1,4 @@
 var myChart
-var chartResizeTimeout
 
 async function getTemps(year, month, day) {
   raw = await fetch("/", {
