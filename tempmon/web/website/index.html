@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/Chart.bundle.min.js"></script>
+    <script src="/script.js"></script>
+    <style>
+      * {
+          padding: 0;
+          margin: 0;
+      }
+      #chartWrapper {
+          position: relative;
+          flex-grow: 1;
+          flex-shrink: 1;
+          overflow: hidden;
+      }
+      #layout {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      #options {
+          height: 50px;
+          flex-shrink: 0;
+          margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="layout">
+      <div id="chartWrapper">
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+      <div id="options">
+        <input type="date" id="datePicker" onchange="updateClick()"></input>
+        Low Pass: <input type="checkbox" id="lowPassBox" checked onchange="updateClick()"></input>
+        Beautify: <input type="checkbox" id="beautifyBox" checked onchange="updateClick()"></input>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+setsid make db >/dev/null 2>&1 </dev/null &
+sleep 5
+setsid make collector >/dev/null 2>&1 </dev/null &
+sudo setsid make web >/dev/null 2>&1 </dev/null &
+
+
